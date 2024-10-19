@@ -14,24 +14,24 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-export function MainNav() {
+export function MainNav({ isScrolled }: { isScrolled: boolean }) {
+  const baseText = "!bg-transparent text-base font-semibold";
+  const textColor = isScrolled ? "text-black" : "text-white hover:text-white";
+
   return (
     <NavigationMenu className="hidden md:block">
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
             <NavigationMenuLink
-              className={cn(
-                navigationMenuTriggerStyle(),
-                "text-base font-semibold",
-              )}
+              className={cn(navigationMenuTriggerStyle(), baseText, textColor)}
             >
               About
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-base font-semibold">
+          <NavigationMenuTrigger className={cn(baseText, textColor)}>
             Service
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -53,10 +53,7 @@ export function MainNav() {
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
             <NavigationMenuLink
-              className={cn(
-                navigationMenuTriggerStyle(),
-                "text-base font-semibold",
-              )}
+              className={cn(navigationMenuTriggerStyle(), baseText, textColor)}
             >
               Contact
             </NavigationMenuLink>

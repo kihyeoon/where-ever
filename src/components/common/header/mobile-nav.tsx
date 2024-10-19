@@ -9,7 +9,8 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-export function MobileNav() {
+export function MobileNav({ isScrolled }: { isScrolled: boolean }) {
+  const textColor = isScrolled ? "" : "text-white hover:text-white";
   const [open, setOpen] = useState(false);
 
   return (
@@ -17,7 +18,10 @@ export function MobileNav() {
       <SheetTrigger asChild>
         <Button
           variant="ghost"
-          className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+          className={cn(
+            "mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden",
+            textColor,
+          )}
         >
           <svg
             strokeWidth="1.5"
