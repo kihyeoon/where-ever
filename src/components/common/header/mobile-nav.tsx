@@ -67,7 +67,13 @@ export function MobileNav({ isScrolled }: { isScrolled: boolean }) {
           <div className="flex flex-col space-y-2">
             {navConfig.map((item, index) => (
               <div key={index} className="flex flex-col space-y-3 pt-6">
-                <h4 className="font-medium">{item.title}</h4>
+                {item.href ? (
+                  <MobileLink href={item.href} onOpenChange={setOpen}>
+                    <h4 className="font-medium">{item.title}</h4>
+                  </MobileLink>
+                ) : (
+                  <h4 className="font-medium">{item.title}</h4>
+                )}
                 {item?.items?.length > 0 &&
                   item.items.map((item) => (
                     <Fragment key={item.href}>

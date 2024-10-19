@@ -1,3 +1,4 @@
+import OverviewSection from "@/components/home/overview-section";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -17,12 +18,12 @@ export default function Home() {
           <h1 className="mb-6 text-nowrap text-3xl font-bold">
             신뢰와 성장을 이끄는 파트너
           </h1>
-          <Button variant={"outline"} className="bg-transparent py-5 text-base">
+          <Button variant="outline" className="bg-transparent py-5 text-base">
             도입 문의하기
           </Button>
         </div>
       </section>
-      <section className="h-screen w-full"></section>
+      <OverviewSection />
     </main>
   );
 }

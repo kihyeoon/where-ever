@@ -12,6 +12,52 @@ body {
   }
 }
 
+@layer components {
+  .bg-hero-pattern {
+    background-image: url("/images/hero-pattern.jpg");
+    background-size: 150rem;
+  }
+  .bg-ink-drops {
+    background-image: radial-gradient(
+        circle at 25% 35%,
+        rgba(255, 127, 150, 0.4),
+        transparent 30%
+      ),
+      radial-gradient(
+        circle at 80% 50%,
+        rgba(255, 127, 150, 0.3),
+        transparent 20%
+      ),
+      radial-gradient(
+        circle at 50% 80%,
+        rgba(255, 127, 150, 0.2),
+        transparent 30%
+      );
+    opacity: 0.8;
+    filter: blur(30px);
+  }
+  .article-sub-title {
+    font-weight: 800;
+    color: #91273a;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .article-title {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 15px;
+    letter-spacing: -0.3px;
+  }
+  .article-description {
+    font-size: 16px;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    letter-spacing: -0.3px;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
