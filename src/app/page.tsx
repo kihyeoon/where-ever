@@ -6,6 +6,7 @@ export default function Home() {
     <main className="relative min-h-dvh overflow-hidden">
       <section className="relative h-screen w-full bg-black">
         <video
+          playsInline
           autoPlay
           loop
           muted
