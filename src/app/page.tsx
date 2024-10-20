@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactSection from "@/components/home/contact-section";
 import OverviewSection from "@/components/home/overview-section";
 import { Button } from "@/components/ui/button";
 
@@ -28,6 +29,7 @@ export default function Home() {
         </div>
       </section>
       <OverviewSection />
+      <ContactSection />
     </main>
   );
 }

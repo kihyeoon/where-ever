@@ -56,7 +56,7 @@ const OverviewSection = () => {
   ];
 
   return (
-    <section className="relative mx-auto mb-20 w-full max-w-[1400px]">
+    <section className="relative mx-auto mb-20 w-full max-w-[1400px] px-5 pt-36">
       <BackgroundInkDrops />
       <Article
         title={
