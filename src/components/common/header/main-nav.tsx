@@ -16,13 +16,13 @@ import {
 
 export function MainNav({ isScrolled }: { isScrolled: boolean }) {
   const baseText = "!bg-transparent text-base font-semibold";
-  const textColor = isScrolled ? "text-black" : "text-white hover:text-white";
+  const textColor = isScrolled ? "text-black" : "!text-white hover:text-white";
 
   return (
     <NavigationMenu className="hidden md:block">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/about" legacyBehavior passHref>
             <NavigationMenuLink
               className={cn(navigationMenuTriggerStyle(), baseText, textColor)}
             >
@@ -51,7 +51,7 @@ export function MainNav({ isScrolled }: { isScrolled: boolean }) {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/contact" legacyBehavior passHref>
             <NavigationMenuLink
               className={cn(navigationMenuTriggerStyle(), baseText, textColor)}
             >
