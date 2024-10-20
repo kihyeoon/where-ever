@@ -12,7 +12,7 @@ const ContactSection = () => {
   return (
     <section className="relative mx-auto mb-20 w-full max-w-[1400px] px-5 pt-36">
       <BackgroundInkDrops />
-      <div className="rounded-2xl bg-[#91273a] px-5 py-10 md:flex md:items-center md:justify-between md:px-10 md:py-14">
+      <div className="bg-main rounded-2xl px-5 py-10 md:flex md:items-center md:justify-between md:px-10 md:py-14">
         <p className="article-title mb-8 text-center text-white md:mb-0 md:text-start md:text-3xl">
           {isMobile ? (
             <>
@@ -36,7 +36,7 @@ const ContactSection = () => {
           </Button>
           <Link href="/contact">
             <Button
-              className="gap-1 font-semibold text-[#91273a]"
+              className="text-main gap-1 font-semibold"
               variant={"secondary"}
             >
               도입 문의하기 <ArrowIcon strokeWidth={0.5} />
