@@ -1,16 +1,10 @@
-import Image from "next/image";
+import ContactForm from "@/components/contact/contact-form";
 
 const page = () => {
   return (
-    <div>
-      <Image
-        className="h-full w-full object-cover"
-        src="/images/buildings.jpg"
-        width={800}
-        height={450}
-        alt="overview"
-      />
-      <h1>Contact</h1>
+    <div className="mx-auto max-w-[1400px] px-5 pt-36">
+      <h1 className="text-xl font-bold">Contact</h1>
+      <ContactForm />
     </div>
   );
 };

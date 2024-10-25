@@ -19,7 +19,7 @@ export default function Home() {
         </video>
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center text-white">
           <h1 className="mb-6 text-nowrap text-3xl font-bold md:mb-10 md:text-5xl">
-            신뢰와 성장을 이끄는 파트너
+            어디서나, 어디서든 가능한
           </h1>
           <Link href="/about">
             <Button variant="outline" className="bg-transparent py-5 text-base">
