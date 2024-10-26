@@ -15,7 +15,8 @@ import {
 } from "@/components/ui/navigation-menu";
 
 export function MainNav({ isScrolled }: { isScrolled: boolean }) {
-  const baseText = "!bg-transparent text-base font-semibold";
+  const baseText =
+    "!bg-transparent text-base font-semibold font-[family-name:var(--font-alata)] font-medium";
   const textColor = isScrolled ? "" : "";
 
   return (
@@ -24,12 +25,7 @@ export function MainNav({ isScrolled }: { isScrolled: boolean }) {
         <NavigationMenuItem>
           <Link href="/about" legacyBehavior passHref>
             <NavigationMenuLink
-              className={cn(
-                navigationMenuTriggerStyle(),
-                baseText,
-                textColor,
-                "font-[family-name:var(--font-alata)] font-medium",
-              )}
+              className={cn(navigationMenuTriggerStyle(), baseText, textColor)}
             >
               WHEREVER?
             </NavigationMenuLink>
