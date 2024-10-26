@@ -1,14 +1,13 @@
 interface ArticleProps {
   title: React.ReactNode;
-  subtitle?: React.ReactNode;
   description?: React.ReactNode;
   children?: React.ReactNode;
+  className?: string;
 }
 
-const Article = ({ title, subtitle, description, children }: ArticleProps) => {
+const Article = ({ title, description, children, className }: ArticleProps) => {
   return (
-    <article className="md:text-center">
-      {subtitle && <h2 className="article-sub-title">{subtitle}</h2>}
+    <article className={className}>
       <h1 className="article-title">{title}</h1>
       {description && <p className="article-description">{description}</p>}
       {children}
