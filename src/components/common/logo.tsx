@@ -17,6 +17,7 @@ const Logo = ({ type = "color" }: Props) => {
       alt="Wherever logo"
       width={180}
       height={30}
+      priority
       // className={`${isScrolled ? "" : "brightness-[100]"}`}
     />
   );

@@ -5,6 +5,7 @@ import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
 import { Fragment, useState } from "react";
 import { navConfig } from "@/components/common/header/config";
+import LogoSmall from "@/components/common/logo-small";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -58,10 +59,10 @@ export function MobileNav({ isScrolled }: { isScrolled: boolean }) {
       <SheetContent side="right" className="pr-0">
         <MobileLink
           href="/"
-          className="flex items-center"
+          className="flex w-fit items-center"
           onOpenChange={setOpen}
         >
-          <span className="font-bold">Wherever</span>
+          <LogoSmall type="grey" />
         </MobileLink>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-2">

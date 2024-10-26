@@ -25,12 +25,12 @@ const Header = () => {
     <header
       className={`fixed top-0 z-50 flex h-[60px] w-screen items-center justify-between px-4 transition-colors duration-300 md:px-14 ${
         isScrolled
-          ? "border-b border-neutral-500 bg-white/50 backdrop-blur-md"
+          ? "border-b bg-background/50 backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
       <Link href="/">
-        <Logo type={isScrolled ? "color" : "mono"} />
+        <Logo type={"mono"} />
       </Link>
 
       <MainNav isScrolled={isScrolled} />

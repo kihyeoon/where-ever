@@ -2,7 +2,7 @@ import { NavItemWithChildren } from "@/types/nav";
 
 export const navConfig: NavItemWithChildren[] = [
   {
-    title: "About",
+    title: "WHEREVER?",
     href: "/about",
     items: [],
   },
