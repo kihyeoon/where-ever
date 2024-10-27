@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MainNav } from "@/components/common/header/main-nav";
 import { MobileNav } from "@/components/common/header/mobile-nav";
@@ -9,17 +10,22 @@ import { useScroll } from "@/hooks/use-scroll";
 
 const Header = () => {
   const scrollY = useScroll();
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleIsScrolled = () => {
       if (typeof window !== "undefined") {
-        setIsScrolled(scrollY >= window.innerHeight - 30);
+        if (pathname === "/contact") {
+          setIsScrolled(true);
+        } else {
+          setIsScrolled(scrollY >= window.innerHeight - 30);
+        }
       }
     };
 
     handleIsScrolled();
-  }, [scrollY]);
+  }, [scrollY, pathname]);
 
   return (
     <header

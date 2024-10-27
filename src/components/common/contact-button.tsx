@@ -15,12 +15,7 @@ export const ContactButton = () => {
         href="/contact"
         className="absolute bottom-16 left-1/2 z-50 -translate-x-1/2"
       >
-        <Button
-          variant="outline"
-          className="bg-background/50 py-5 text-base backdrop-blur-md"
-        >
-          CONTACT
-        </Button>
+        <Button className="py-5 text-base">CONTACT</Button>
       </Link>
     </motion.div>
   );
