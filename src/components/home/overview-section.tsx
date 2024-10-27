@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Article from "@/components/common/article/article";
 import BackgroundInkDrops from "@/components/common/background-ink-drops";
