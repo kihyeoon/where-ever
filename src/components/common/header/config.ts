@@ -11,23 +11,22 @@ export const navConfig: NavItemWithChildren[] = [
     items: [
       {
         title: "플레이스 마케팅",
-        href: "/",
-        description:
-          "A modal dialog that interrupts the user with important content and expects a response.",
+        href: "/place",
         items: [],
       },
       {
-        title: "체험단 마케팅",
-        href: "/",
-        description:
-          "For sighted users to preview content available behind a link.",
+        title: "인스타 마케팅",
+        href: "/sns",
         items: [],
       },
       {
-        title: "스마트 스토어 마케팅",
-        href: "/",
-        description:
-          "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+        title: "바이럴 마케팅",
+        href: "/viral",
+        items: [],
+      },
+      {
+        title: "브랜딩",
+        href: "/branding",
         items: [],
       },
     ],
