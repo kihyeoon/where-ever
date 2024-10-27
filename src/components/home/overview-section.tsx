@@ -1,6 +1,10 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Article from "@/components/common/article/article";
 import BackgroundInkDrops from "@/components/common/background-ink-drops";
+import IncreasingNumber from "@/components/home/increasing-number";
 import { Separator } from "@/components/ui/separator";
 
 const OverviewSection = () => {
@@ -23,14 +27,18 @@ const OverviewSection = () => {
         ></Article>
         <Separator className="my-10 bg-foreground" />
         <div className="flex items-center justify-between">
-          <p className="text-6xl">91.7%</p>
+          <IncreasingNumber className="text-6xl" value={91.7} toFixed={1} />
           <p className="text-2xl">재계약률</p>
         </div>
         <Separator className="my-10 bg-foreground" />
         <div className="flex items-center justify-between">
-          <p className="text-6xl">
-            14,200<span className="text-xl">건 이상</span>
-          </p>
+          <span className="flex items-end">
+            <IncreasingNumber
+              className="text-6xl"
+              value={14200}
+            ></IncreasingNumber>
+            <span className="text-xl">건 이상</span>
+          </span>
           <p className="text-2xl">캠페인 진행</p>
         </div>
         <Separator className="my-10 bg-foreground" />

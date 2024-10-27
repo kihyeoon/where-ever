@@ -1,4 +1,3 @@
-import Image from "next/image";
 import BackgroundInkDrops from "@/components/common/background-ink-drops";
 import { ParallaxText } from "@/components/common/parallax-text";
 import { HeroSectionTypos } from "@/components/service/hero-section-typos";
