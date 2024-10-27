@@ -64,19 +64,19 @@ export function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
    * dynamically generated number of children.
    */
   return (
-    <div className="flex select-none whitespace-nowrap">
+    <div className="flex select-none overflow-hidden whitespace-nowrap">
       <motion.div
-        className="flex flex-nowrap whitespace-nowrap text-9xl uppercase"
+        className="flex flex-nowrap whitespace-nowrap text-7xl uppercase md:text-9xl"
         style={{ x }}
       >
         <span>{children}</span>
-        <Dot className="mx-7 my-auto" />
+        <Dot className="mx-7 my-auto size-3 md:size-6" />
         <span>{children}</span>
-        <Dot className="mx-7 my-auto" />
+        <Dot className="mx-7 my-auto size-3 md:size-6" />
         <span>{children}</span>
-        <Dot className="mx-7 my-auto" />
+        <Dot className="mx-7 my-auto size-3 md:size-6" />
         <span>{children}</span>
-        <Dot className="mx-7 my-auto" />
+        <Dot className="mx-7 my-auto size-3 md:size-6" />
       </motion.div>
     </div>
   );
