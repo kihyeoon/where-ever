@@ -3,7 +3,7 @@ import { HeroSectionTypos } from "@/components/home/hero-section-typos";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen w-full bg-black">
+    <section className="relative mb-20 h-screen w-full bg-black">
       <video
         playsInline
         autoPlay

@@ -90,15 +90,15 @@ function Card({
   return (
     <div
       className={cn(
-        "group relative flex h-full flex-col items-start justify-between rounded-2xl bg-transparent p-4 transition-colors duration-500 hover:bg-main md:justify-end",
+        "group relative flex h-full flex-col items-start justify-between rounded-2xl bg-main p-4 transition-colors duration-500 md:justify-end md:bg-transparent md:hover:bg-main",
         className,
       )}
     >
       <h2 className="text-2xl md:absolute md:top-1/2 md:-translate-y-1/2">
         {title}
       </h2>
-      <ArrowIcon className="absolute right-4 top-1/2 size-6 -translate-y-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-      <p className="w-1/2 leading-tight tracking-tight opacity-0 transition-opacity duration-500 group-hover:opacity-100 md:w-auto">
+      <ArrowIcon className="absolute right-4 top-1/2 size-6 -translate-y-1/2 transition-opacity duration-500 md:opacity-0 md:group-hover:opacity-100" />
+      <p className="w-1/2 leading-tight tracking-tight transition-opacity duration-500 md:w-auto md:opacity-0 md:group-hover:opacity-100">
         {description}
       </p>
     </div>

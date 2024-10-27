@@ -32,7 +32,7 @@ const textRows = [
 
 export const HeroSectionTypos = () => {
   return (
-    <div className="w-full whitespace-pre">
+    <div className="w-full whitespace-pre tracking-tight">
       {textRows.map((row, rowIndex) => (
         <Row key={rowIndex} rowIndex={rowIndex}>
           {row.split("").map((char, charIndex) => (

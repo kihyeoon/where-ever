@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 export default function Footer() {
   return (
     <>
-      <Separator className="my-6" />
+      <Separator className="my-6 mt-40" />
       <footer className="mx-auto mb-20 w-full max-w-[1440px] px-5">
         <div className="flex flex-col md:flex-row md:justify-between md:space-x-8">
           <div className="mb-8 md:mb-0 md:w-1/3">
