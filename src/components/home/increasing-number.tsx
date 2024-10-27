@@ -11,7 +11,7 @@ interface IncreasingNumberProps {
 
 const IncreasingNumber = ({
   value,
-  duration = 3,
+  duration = 2,
   toFixed = 0,
   className,
 }: IncreasingNumberProps) => {

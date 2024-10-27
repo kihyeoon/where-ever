@@ -24,19 +24,23 @@ const OverviewSection = () => {
         ></Article>
         <Separator className="my-10 bg-foreground" />
         <div className="flex items-center justify-between">
-          <IncreasingNumber className="text-6xl" value={91.7} toFixed={1} />
-          <p className="text-2xl">재계약률</p>
+          <IncreasingNumber
+            className="text-4xl md:text-6xl"
+            value={91.7}
+            toFixed={1}
+          />
+          <p className="text-lg md:text-2xl">재계약률</p>
         </div>
         <Separator className="my-10 bg-foreground" />
         <div className="flex items-center justify-between">
           <span className="flex items-end">
             <IncreasingNumber
-              className="text-6xl"
+              className="w-[112px] text-4xl md:w-[190px] md:text-6xl"
               value={14200}
             ></IncreasingNumber>
-            <span className="text-xl">건 이상</span>
+            <span className="text-base md:text-xl">건 이상</span>
           </span>
-          <p className="text-2xl">캠페인 진행</p>
+          <p className="text-lg md:text-2xl">캠페인 진행</p>
         </div>
         <Separator className="my-10 bg-foreground" />
       </div>
