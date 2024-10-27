@@ -33,12 +33,12 @@ export function MainNav({ isScrolled }: { isScrolled: boolean }) {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger className={cn(baseText, textColor)}>
-            Service
+            Marketing
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[200px] gap-3 p-4 md:grid-cols-1">
+            <ul className="grid w-[250px] gap-3 p-4 md:grid-cols-1">
               {navConfig
-                .find((item) => item.title === "Service")
+                .find((item) => item.title === "Marketing")
                 ?.items.map((item) => (
                   <ListItem
                     key={item.title}

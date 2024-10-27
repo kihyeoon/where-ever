@@ -7,20 +7,20 @@ export const navConfig: NavItemWithChildren[] = [
     items: [],
   },
   {
-    title: "Service",
+    title: "Marketing",
     items: [
       {
-        title: "플레이스 마케팅",
+        title: "플레이스",
         href: "/place",
         items: [],
       },
       {
-        title: "인스타 마케팅",
+        title: "인스타",
         href: "/sns",
         items: [],
       },
       {
-        title: "바이럴 마케팅",
+        title: "바이럴",
         href: "/viral",
         items: [],
       },
