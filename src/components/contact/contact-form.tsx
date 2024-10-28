@@ -227,6 +227,12 @@ export default function ContactForm() {
           )}
         />
 
+        {/* 안내 문구 */}
+        <p className="text-pretty break-keep text-sm text-neutral-400">
+          ※ 기재해주신 문의내용은 오직 상담만을 위해 저장되며, 절대 제 3자에게
+          공유되지 않습니다. <br />※ 문의내용은 3개월 뒤 폐기됩니다.
+        </p>
+
         <Button type="submit">문의하기</Button>
       </form>
     </Form>
