@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowIcon } from "@/components/common/icons";
 import Logo from "@/components/common/logo";
 import { Separator } from "@/components/ui/separator";
 
@@ -29,15 +30,19 @@ export default function Footer() {
             <div>
               <h3 className="mb-4 font-semibold">Channel</h3>
               <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="text-sm text-gray-400">
+                <li className="flex items-center text-sm text-gray-400">
+                  <Link
+                    href="https://instagram.com/wherever___official/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Instagram
                   </Link>
+                  <ArrowIcon className="size-3 -rotate-45 transform" />
                 </li>
-                <li>
-                  <Link href="#" className="text-sm text-gray-400">
-                    Kakao
-                  </Link>
+                <li className="flex items-center text-sm text-gray-400">
+                  <Link href="#">Kakao</Link>
+                  <ArrowIcon className="size-3 -rotate-45 transform" />
                 </li>
               </ul>
             </div>

@@ -45,7 +45,7 @@ const OverviewSection = () => {
         <Separator className="my-10 bg-foreground" />
       </div>
 
-      <div className="relative mt-14 aspect-square flex-1 overflow-hidden rounded-2xl bg-black md:mt-0">
+      <div className="md:full relative aspect-square w-2/3 flex-1 overflow-hidden rounded-2xl bg-black md:mt-0">
         <Image
           className="h-full w-full object-cover opacity-70"
           src="/images/buildings.jpg"
