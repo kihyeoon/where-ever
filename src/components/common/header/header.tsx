@@ -16,7 +16,7 @@ const Header = () => {
   useEffect(() => {
     const handleIsScrolled = () => {
       if (typeof window !== "undefined") {
-        if (pathname === "/contact") {
+        if (pathname === "/contact" || pathname === "/404") {
           setIsScrolled(true);
         } else {
           setIsScrolled(scrollY >= window.innerHeight - 30);
