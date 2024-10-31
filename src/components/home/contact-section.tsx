@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { ArrowIcon, DownloadIcon } from "@/components/common/icons";
 import { Button } from "@/components/ui/button";

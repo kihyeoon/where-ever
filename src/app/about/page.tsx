@@ -1,5 +1,7 @@
 import Image from "next/image";
+import CardsSection from "@/components/about/cards-section";
 import BackgroundInkDrops from "@/components/common/background-ink-drops";
+import ContactSection from "@/components/home/contact-section";
 import OverviewSection from "@/components/home/overview-section";
 
 const Page = () => {
@@ -75,6 +77,8 @@ const Page = () => {
         </div>
       </section>
       <OverviewSection noArticle />
+      <CardsSection />
+      <ContactSection />
     </main>
   );
 };
