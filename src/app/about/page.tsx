@@ -24,10 +24,11 @@ const Page = () => {
           <p className="w-96 text-pretty break-keep text-lg font-semibold leading-7 text-neutral-400 md:text-2xl md:leading-9">
             웨어에버는 말 그대로 어디서나, 그리고 어디서든{" "}
             <span className="text-white">가치를 실현시키고</span> 저희와
-            동행하는 모든 분들의 수익화를 위해 끊임없이 고민하고 성장합니다.
+            동행하는 모든 분들의 수익화를 위해 끊임없이 고민하고 성장합니다.{" "}
+            <br />
             또한 한 매체에 집중하는 것이 아닌{" "}
-            <span className="text-white">마케팅을 다각화함으로서</span>
-            타겟 영역을 점진적으로 확장하여 언제든, 어디서든{" "}
+            <span className="text-white">마케팅을 다각화함으로서</span> 타겟
+            영역을 점진적으로 확장하여 언제든, 어디서든{" "}
             <span className="text-white">신뢰받는 기업</span>이 될 수 있도록
             최선을 다하고 있습니다.
           </p>
