@@ -1,20 +1,22 @@
 import Image from "next/image";
 
-export function WithImageCard({
-  src,
-  title,
-  description,
-}: {
+interface WithImageCardProps {
   src: string;
   title: string;
   description: string;
-}) {
+}
+
+export const WithImageCard = ({
+  src,
+  title,
+  description,
+}: WithImageCardProps) => {
   return (
-    <div className="">
+    <article>
       <Image
         className="aspect-square w-full rounded-2xl object-cover opacity-80"
         src={src}
-        alt="place"
+        alt={title}
         width={450}
         height={450}
       />
@@ -22,6 +24,6 @@ export function WithImageCard({
       <p className="mt-2 font-light leading-tight tracking-tight">
         {description}
       </p>
-    </div>
+    </article>
   );
-}
+};

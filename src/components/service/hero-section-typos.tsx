@@ -22,21 +22,32 @@ const textVariants = {
   },
 };
 
-const textRows = [
-  "소비자 정보 탐색 시 가장 먼저",
-  "확인하는 장소 1위",
-  "지도와 연계되어 가게의 기본 정보뿐만 아니라 영업시간, 메뉴, 위치, 사진, ",
-  "그리고 고객들의 리뷰까지 모두 확인할 수 있는 플랫폼입니다. ",
-  "플레이스 순위상승에 핵심적인 서비스 제공으로 타겟 고객의 유입을 유도합니다.",
-];
+interface HeroSectionTyposProps {
+  headlines: string[];
+  breakIndex?: number;
+  breakMarginIndex?: number;
+}
 
-export const HeroSectionTypos = () => {
+export const HeroSectionTypos = ({
+  headlines,
+  breakIndex = 1,
+  breakMarginIndex = 1,
+}: HeroSectionTyposProps) => {
   return (
     <div className="w-full whitespace-pre tracking-tight">
-      {textRows.map((row, rowIndex) => (
-        <Row key={rowIndex} rowIndex={rowIndex}>
-          {row.split("").map((char, charIndex) => (
-            <TypoText key={charIndex} char={char} rowIndex={rowIndex} />
+      {headlines.map((line, rowIndex) => (
+        <Row
+          key={rowIndex}
+          rowIndex={rowIndex}
+          breakMarginIndex={breakMarginIndex}
+        >
+          {line.split("").map((char, charIndex) => (
+            <TypoText
+              key={charIndex}
+              char={char}
+              rowIndex={rowIndex}
+              breakIndex={breakIndex}
+            />
           ))}
         </Row>
       ))}
@@ -47,9 +58,11 @@ export const HeroSectionTypos = () => {
 const Row = ({
   children,
   rowIndex,
+  breakMarginIndex,
 }: {
   children: React.ReactNode;
   rowIndex: number;
+  breakMarginIndex: number;
 }) => {
   return (
     <motion.div
@@ -59,7 +72,7 @@ const Row = ({
       animate="visible"
       className={cn(
         "flex h-auto flex-wrap items-center overflow-hidden",
-        rowIndex === 1 && "mb-8 md:mb-12",
+        rowIndex === breakMarginIndex && "mb-8 md:mb-12",
       )}
     >
       {children}
@@ -67,13 +80,21 @@ const Row = ({
   );
 };
 
-const TypoText = ({ char, rowIndex }: { char: string; rowIndex: number }) => {
+const TypoText = ({
+  char,
+  rowIndex,
+  breakIndex,
+}: {
+  char: string;
+  rowIndex: number;
+  breakIndex: number;
+}) => {
   return (
     <motion.div
       variants={textVariants}
       className={cn(
         "text-3xl md:text-5xl",
-        rowIndex > 1 && "text-lg md:text-xl",
+        rowIndex > breakIndex && "text-lg md:text-xl",
       )}
     >
       {char}
