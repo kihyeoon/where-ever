@@ -1,8 +1,13 @@
 "use client";
 
+import { sendEmail } from "@/service/contact";
+import {
+  FormData,
+  FormSchema,
+  MAX_DESCRIPTION_LENGTH,
+} from "@/service/contact";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -24,39 +29,8 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 
-const MAX_DESCRIPTION_LENGTH = 500;
-
-const FormSchema = z.object({
-  howDidYouHear: z.enum(["유튜브", "네이버블로그", "인스타그램"], {
-    required_error: "경로를 선택해주세요.",
-  }),
-  monthlyBudget: z.enum(["1-50", "50-100", "100-300", "300-500"], {
-    required_error: "월 예산을 선택해주세요.",
-  }),
-  problemDescription: z
-    .string()
-    .min(1, {
-      message: "현재 고민 중인 문제를 입력해주세요.",
-    })
-    .max(MAX_DESCRIPTION_LENGTH, {
-      message: `최대 ${MAX_DESCRIPTION_LENGTH}자까지 입력 가능합니다.`,
-    }),
-  companyName: z.string().min(1, {
-    message: "업체명을 입력해주세요.",
-  }),
-  region: z.string().min(1, {
-    message: "지역을 입력해주세요.",
-  }),
-  contactNumber: z.string().regex(/^\d+-\d+-\d+$/, {
-    message: "연락처는 000-0000-0000 형태로 입력해주세요.",
-  }),
-  email: z.string().email({
-    message: "유효한 이메일 주소를 입력해주세요.",
-  }),
-});
-
 export default function ContactForm() {
-  const form = useForm<z.infer<typeof FormSchema>>({
+  const form = useForm<FormData>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
       howDidYouHear: undefined,
@@ -69,15 +43,19 @@ export default function ContactForm() {
     },
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "제출된 정보:",
-      description: (
-        <pre className="mt-2 w-full rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    });
+  function onSubmit(data: FormData) {
+    sendEmail(data)
+      .then(() => {
+        toast({
+          title: "메일을 성공적으로 보냈습니다.",
+        });
+        form.reset();
+      })
+      .catch(() => {
+        toast({
+          title: "메일을 보내는데 실패했습니다.",
+        });
+      });
   }
 
   return (

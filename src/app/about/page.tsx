@@ -21,7 +21,7 @@ const Page = () => {
         </div>
         <div className="absolute inset-0 flex flex-col justify-center gap-6 px-8 md:px-32">
           <div className="text-5xl font-semibold md:text-6xl">WHEREVER?</div>
-          <p className="w-96 text-pretty break-keep text-lg font-semibold leading-7 text-neutral-400 md:text-2xl md:leading-9">
+          <p className="w-full text-pretty break-keep text-lg font-semibold leading-7 text-neutral-400 sm:w-96 md:text-2xl md:leading-9">
             웨어에버는 말 그대로 어디서나, 그리고 어디서든{" "}
             <span className="text-white">가치를 실현시키고</span> 저희와
             동행하는 모든 분들의 수익화를 위해 끊임없이 고민하고 성장합니다.{" "}
