@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import { Alata } from "next/font/google";
 import localFont from "next/font/local";
@@ -81,6 +82,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko-KR" className="dark">
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID as string} />
       <body
         className={`${pretendard.variable} ${alata.variable} font-[family-name:var(--font-pretendard),var(--font-alata)] antialiased`}
       >
