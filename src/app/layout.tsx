@@ -21,9 +21,41 @@ const alata = Alata({
 
 export const metadata: Metadata = {
   title: "Wherever",
-  description: "Wherever의 홈페이지에 오신 것을 환영합니다.",
+  description: "어디서나, 어디든지, 웨어에버",
+  keywords: [
+    "Wherever",
+    "웨어에버",
+    "마케팅",
+    "브랜딩",
+    "플레이스마케팅",
+    "SNS마케팅",
+    "바이럴마케팅",
+  ],
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  // openGraph
+  openGraph: {
+    title: "Wherever",
+    description: "어디서나, 어디든지, 웨어에버",
+    siteName: "Wherever",
+    locale: "ko-KR",
+    type: "website",
+    url: process.env.SITE_URL,
+    images: [
+      {
+        url: `${process.env.SITE_URL}/og.png`,
+        width: 1200,
+        height: 630,
+        alt: "Wherever",
+      },
+    ],
   },
 };
 

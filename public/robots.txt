@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://where-ever.co.kr
+
+# Sitemaps
+Sitemap: https://where-ever.co.kr/sitemap.xml
