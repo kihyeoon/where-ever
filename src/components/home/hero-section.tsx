@@ -1,5 +1,6 @@
 import ContactButton from "@/components/common/contact-button";
-import { HeroSectionTypos } from "@/components/home/hero-section-typos";
+// import { HeroSectionTypos } from "@/components/home/hero-section-typos";
+import { HeroSectionTypedTypos } from "@/components/home/hero-section-typed-typos";
 
 const HeroSection = () => {
   return (
@@ -14,7 +15,8 @@ const HeroSection = () => {
         <source src="/videos/city-night.mp4" type="video/mp4" />
         비디오를 지원하지 않는 브라우저입니다.
       </video>
-      <HeroSectionTypos />
+      {/* <HeroSectionTypos /> */}
+      <HeroSectionTypedTypos />
       <ContactButton />
     </section>
   );

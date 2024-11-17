@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Alata } from "next/font/google";
 import localFont from "next/font/local";
 import Footer from "@/components/common/footer/footer";
@@ -22,6 +22,18 @@ const alata = Alata({
 export const metadata: Metadata = {
   title: "Wherever",
   description: "Wherever의 홈페이지에 오신 것을 환영합니다.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#000000",
+  colorScheme: "dark",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
@@ -30,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="ko-KR" className="dark">
       <body
         className={`${pretendard.variable} ${alata.variable} font-[family-name:var(--font-pretendard),var(--font-alata)] antialiased`}
       >
