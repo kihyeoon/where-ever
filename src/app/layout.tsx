@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   description: "어디서나, 어디든지, 웨어에버",
   keywords: [
     "Wherever",
+    "주식회사 웨어에버",
     "웨어에버",
     "마케팅",
     "브랜딩",
