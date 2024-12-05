@@ -40,7 +40,7 @@ const jsonLd: WithContext<Organization> = {
     "@type": "ContactPoint",
     telephone: "070-7801-3030",
     contactType: "customer service",
-    email: "contact@where-ever.kr",
+    email: "wherever23@naver.com",
   },
   sameAs: ["https://instagram.com/wherever___official/"],
   areaServed: "KR",
