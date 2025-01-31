@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Card from "./card";
 
@@ -112,9 +106,9 @@ const CardsSection = () => {
     },
   );
 
-  useMotionValueEvent(x, "change", (latest) => {
-    console.log(latest);
-  });
+  // useMotionValueEvent(x, "change", (latest) => {
+  //   console.log(latest);
+  // });
 
   return (
     <section ref={sectionRef} className="relative mb-20 h-[600vh] w-full">
