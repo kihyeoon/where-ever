@@ -1,8 +1,8 @@
+import Image from "next/image";
 import BackgroundInkDrops from "@/components/common/background-ink-drops";
 import { ParallaxText } from "@/components/common/parallax-text";
-// import { FAQSection } from "@/components/service/faq-section";
+import ContactSection from "@/components/home/contact-section";
 import { HeroSectionTypos } from "@/components/service/hero-section-typos";
-import { WithImageCard } from "@/components/service/with-image-card";
 import { Separator } from "@/components/ui/separator";
 
 const snsHeadlines = [
@@ -28,22 +28,17 @@ const page = () => {
         />
       </section>
       <section className="mx-auto mb-20 max-w-[1440px] px-5 pt-20 md:pt-28">
-        <Separator className="mb-5 bg-foreground" />
-        <h1 className="article-title">HOW TO</h1>
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-          <WithImageCard
-            src="/images/keyboard-typing.jpg"
-            title="프로필&게시물 참여유입"
-            description="프로필 팔로워와 게시물의 인기를 좌우하는 좋아요, 저장, 댓글 등의 소통참여를 제공합니다."
-          />
-          <WithImageCard
-            src="/images/instagram.jpg"
-            title="인기게시물"
-            description="타겟 고객의 해시태그 검색 시 바로 노출되는 인기게시물 서비스를 제공합니다."
-          />
-        </div>
+        <Separator className="mb-40" />
+        <Image
+          priority
+          src="/images/service-insta.png"
+          alt="instagram"
+          width={840}
+          height={560}
+          className="mx-auto w-full rounded-lg md:w-4/5 lg:w-3/5"
+        />
       </section>
-      {/* <FAQSection /> */}
+      <ContactSection />
     </main>
   );
 };

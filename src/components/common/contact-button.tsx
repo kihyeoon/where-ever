@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Magnetic } from "@/components/ui/magnetic";
 
 export const ContactButton = () => {
   return (
@@ -15,7 +16,13 @@ export const ContactButton = () => {
         href="/contact"
         className="absolute bottom-16 left-1/2 z-50 -translate-x-1/2"
       >
-        <Button className="py-5 text-base">CONTACT</Button>
+        <Magnetic intensity={0.2} actionArea="global" range={200}>
+          <Button className="py-5 text-base">
+            <Magnetic intensity={0.1} actionArea="global" range={200}>
+              CONTACT
+            </Magnetic>
+          </Button>
+        </Magnetic>
       </Link>
     </motion.div>
   );

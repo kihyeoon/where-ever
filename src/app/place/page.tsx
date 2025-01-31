@@ -28,7 +28,7 @@ const page = () => {
         />
       </section>
       <section className="mx-auto mb-20 max-w-[1440px] px-5 pt-20 md:pt-28">
-        <Separator className="mb-40 bg-foreground" />
+        <Separator className="mb-40" />
         <Image
           priority
           src="/images/service-place.png"
