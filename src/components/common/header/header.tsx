@@ -8,6 +8,15 @@ import { MobileNav } from "@/components/common/header/mobile-nav";
 import Logo from "@/components/common/logo";
 import { useScroll } from "@/hooks/use-scroll";
 
+const scrolledPaths = [
+  "/contact",
+  "/404",
+  "/sns",
+  "/place",
+  "/viral",
+  "/branding",
+];
+
 const Header = () => {
   const scrollY = useScroll();
   const pathname = usePathname();
@@ -16,7 +25,7 @@ const Header = () => {
   useEffect(() => {
     const handleIsScrolled = () => {
       if (typeof window !== "undefined") {
-        if (pathname === "/contact" || pathname === "/404") {
+        if (scrolledPaths.includes(pathname)) {
           setIsScrolled(true);
         } else {
           setIsScrolled(scrollY >= window.innerHeight - 30);
