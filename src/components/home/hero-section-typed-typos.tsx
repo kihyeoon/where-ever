@@ -12,10 +12,11 @@ export const HeroSectionTypedTypos = () => {
         typeSpeed={50}
         backSpeed={30}
         loop
+        smartBackspace={false}
         className="block text-6xl font-semibold md:text-8xl"
-        style={{ 
-          whiteSpace: 'pre-line',
-          lineHeight: '1.5',
+        style={{
+          whiteSpace: "pre-line",
+          lineHeight: "1.5",
         }}
       />
     </div>
