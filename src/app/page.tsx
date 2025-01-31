@@ -1,5 +1,4 @@
 import { CardCarousel } from "@/components/common/card-carousel";
-import ContactSection from "@/components/home/contact-section";
 import HeroSection from "@/components/home/hero-section";
 import OverviewSection from "@/components/home/overview-section";
 
@@ -9,7 +8,6 @@ export default function Home() {
       <HeroSection />
       <OverviewSection />
       <CardCarousel />
-      <ContactSection />
     </main>
   );
 }

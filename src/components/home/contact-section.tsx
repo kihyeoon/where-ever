@@ -1,33 +1,78 @@
+"use client";
+
+import { motion } from "motion/react";
 import Link from "next/link";
-import { ArrowIcon, DownloadIcon } from "@/components/common/icons";
+import { useState } from "react";
+import { ArrowIcon } from "@/components/common/icons";
 import { Button } from "@/components/ui/button";
+import { GlowEffect } from "@/components/ui/glow-effect";
+import { TextEffect } from "@/components/ui/text-effect";
 
 const ContactSection = () => {
+  const [isInView, setIsInView] = useState(false);
+
   return (
-    <section className="relative mx-auto mb-20 w-full max-w-[1440px] px-5 pt-36">
-      <div className="rounded-2xl bg-main px-5 py-10 md:flex md:items-center md:justify-between md:px-10 md:py-14">
-        <p className="article-title mb-8 text-center text-white md:mb-0 md:text-start md:text-3xl">
-          <>
+    <section className="relative mx-auto mb-20 w-full max-w-[1440px] px-5 pt-20">
+      <motion.div
+        className="mx-auto flex aspect-video max-w-xl flex-col items-center justify-evenly rounded-2xl border"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 1 },
+        }}
+        onViewportEnter={() => {
+          setIsInView(true);
+        }}
+        viewport={{ once: true, amount: "all" }}
+      >
+        <div className="flex flex-col items-center gap-2">
+          <TextEffect
+            preset="fade-in-blur"
+            trigger={isInView}
+            speedReveal={1.5}
+            speedSegment={0.3}
+            delay={0.5}
+            className="text-2xl font-bold text-white md:text-3xl"
+          >
             웨어에버와 함께,
-            <br />
+          </TextEffect>
+          <TextEffect
+            preset="fade-in-blur"
+            trigger={isInView}
+            speedReveal={1.5}
+            speedSegment={0.3}
+            delay={1}
+            className="text-2xl font-bold text-white md:text-3xl"
+          >
             여정을 시작해보세요!
-          </>
-        </p>
-        <div className="flex justify-center gap-2">
-          <Button className="gap-1 bg-white/20 font-semibold text-primary hover:bg-white/10">
-            회사소개서
-            <DownloadIcon strokeWidth={0.5} />
-          </Button>
-          <Link href="/contact">
-            <Button
-              className="gap-1 bg-foreground font-semibold text-main hover:bg-foreground/80"
-              variant={"secondary"}
-            >
-              문의하기 <ArrowIcon strokeWidth={0.5} />
-            </Button>
-          </Link>
+          </TextEffect>
         </div>
-      </div>
+        <div className="flex justify-center gap-2">
+          <div className="relative">
+            <GlowEffect
+              colors={["#FF5733", "#33FF57", "#3357FF", "#F1C40F"]}
+              mode="colorShift"
+              blur="soft"
+              duration={3}
+              scale={1}
+            />
+            <Button
+              className="relative inline-flex items-center gap-1 rounded-md bg-zinc-950 px-2.5 py-1.5 text-sm text-zinc-50 outline outline-1 outline-[#fff2f21f] hover:bg-zinc-950"
+              asChild
+            >
+              <Link href="/contact">
+                문의하기 <ArrowIcon strokeWidth={0.5} />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </motion.div>
+      <p className="mx-auto mt-5 max-w-xl break-words break-keep text-left text-sm text-gray-600">
+        ※ 전자상거래법 제 17조에 의거하여, 계약 체결일로부터 7일 이내로 청약
+        철회가 가능하나, 계약 당일로부터 청약 철회일까지 집행된 서비스 비용을
+        제외하고 환불 가능한 점 유의 바랍니다.
+      </p>
     </section>
   );
 };
