@@ -9,7 +9,7 @@ import {
   useTransform,
   useVelocity,
   wrap,
-} from "framer-motion";
+} from "motion/react";
 import { useRef } from "react";
 import Dot from "@/components/common/dot";
 
