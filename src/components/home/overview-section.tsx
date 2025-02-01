@@ -11,7 +11,7 @@ interface Props {
 
 const OverviewSection = ({ noArticle }: Props) => {
   return (
-    <section className="relative mx-auto mb-20 flex w-full max-w-[1440px] flex-col gap-6 px-5 pt-36 md:flex-row">
+    <section className="relative mx-auto flex w-full max-w-[1440px] flex-col gap-6 px-5 py-10 md:flex-row md:py-20">
       <BackgroundInkDrops />
 
       <div className="flex-1">
@@ -24,7 +24,7 @@ const OverviewSection = ({ noArticle }: Props) => {
                 <>
                   웨어에버는 말 그대로 어디서나, <br />
                   그리고 어디서든 가치를 실현시키고 <br />
-                  저희와 동행하는 모든 분들의 수익화를 위해 <br />
+                  동행하는 모든 분들과의 성공을 위해 <br />
                   끊임없이 고민하고 성장합니다. <br />
                 </>
               }

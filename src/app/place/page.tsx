@@ -20,15 +20,15 @@ const page = () => {
       <section className="mt-44 md:mt-64">
         <ParallaxText baseVelocity={-3}>Place Marketing</ParallaxText>
       </section>
-      <section className="mx-auto mb-20 max-w-[1440px] px-5 pt-20 md:pt-28">
+      <section className="mx-auto mb-10 max-w-[1440px] px-5 pt-20 md:mb-20 md:pt-28">
         <HeroSectionTypos
           headlines={placeHeadlines}
           breakIndex={1}
           breakMarginIndex={1}
         />
       </section>
-      <section className="mx-auto mb-20 max-w-[1440px] px-5 pt-20 md:pt-28">
-        <Separator className="mb-40" />
+      <section className="mx-auto max-w-[1440px] px-5 py-10 md:py-20">
+        <Separator className="mb-20 md:mb-40" />
         <Image
           priority
           src="/images/service-place.png"

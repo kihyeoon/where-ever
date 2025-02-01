@@ -5,11 +5,12 @@ import ContactSection from "@/components/home/contact-section";
 const Page = () => {
   return (
     <main>
-      <section className="relative mb-20 h-screen w-full overflow-hidden bg-black">
+      <section className="relative h-screen w-full overflow-hidden bg-black">
         <div className="relative h-screen w-full opacity-35">
           <Image
             src="/images/웨어에버-컵홀더.jpeg"
             alt="overview"
+            priority
             fill
             style={{
               objectFit: "cover",
@@ -34,7 +35,7 @@ const Page = () => {
       </section>
       <section className="relative flex h-screen flex-col justify-center px-8 md:flex-row md:items-center md:justify-evenly md:gap-3 md:px-32">
         <BackgroundInkDrops />
-        <div className="mb-12 h-60 md:mb-0 md:w-72">
+        <div className="mb-12 h-60 md:mb-0 md:h-40 md:w-72">
           <h2 className="text-2xl font-semibold md:text-3xl">
             &apos;고객&apos;의
           </h2>
@@ -45,7 +46,7 @@ const Page = () => {
             <li>유연한 커뮤니케이션 사고</li>
           </ul>
         </div>
-        <div className="h-60 md:w-72">
+        <div className="h-60 md:h-40 md:w-72">
           <h2 className="text-2xl font-semibold md:text-3xl">
             &apos;소비자&apos;의
           </h2>
@@ -56,7 +57,7 @@ const Page = () => {
           </ul>
         </div>
       </section>
-      <section className="relative mb-20 h-screen">
+      <section className="relative mb-10 h-screen md:mb-20">
         <div className="relative size-full opacity-25">
           <Image
             src="/images/웨어에버-명함.jpeg"

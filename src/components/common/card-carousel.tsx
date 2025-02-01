@@ -84,7 +84,7 @@ export function CardCarousel() {
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-full pt-20"
+      className="w-full py-10 md:py-20"
       opts={{
         loop: true,
       }}
