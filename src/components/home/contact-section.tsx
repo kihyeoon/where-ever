@@ -48,7 +48,7 @@ const ContactSection = ({
             <TextEffect
               preset="fade-in-blur"
               trigger={isInView}
-              speedReveal={1.5}
+              speedReveal={1}
               speedSegment={0.3}
               delay={0.5}
               className="text-2xl font-bold text-white md:text-3xl"
@@ -58,7 +58,7 @@ const ContactSection = ({
             <TextEffect
               preset="fade-in-blur"
               trigger={isInView}
-              speedReveal={1.5}
+              speedReveal={1}
               speedSegment={0.3}
               delay={1}
               className="text-2xl font-bold text-white md:text-3xl"

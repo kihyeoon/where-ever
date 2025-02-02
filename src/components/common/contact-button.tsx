@@ -14,7 +14,7 @@ export const ContactButton = () => {
     >
       <Link
         href="/contact"
-        className="absolute bottom-16 left-1/2 z-50 -translate-x-1/2"
+        className="absolute bottom-16 left-1/2 -translate-x-1/2"
       >
         <Magnetic intensity={0.2} actionArea="global" range={200}>
           <Button className="py-5 text-base">
