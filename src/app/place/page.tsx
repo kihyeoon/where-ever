@@ -20,25 +20,27 @@ const page = () => {
       <section className="mt-44 md:mt-64">
         <ParallaxText baseVelocity={-3}>Place Marketing</ParallaxText>
       </section>
-      <section className="mx-auto mb-10 max-w-[1440px] px-5 pt-20 md:mb-20 md:pt-28">
+      <section className="mx-auto max-w-[1440px] px-5 pb-10 pt-20 md:pb-20 md:pt-28">
         <HeroSectionTypos
           headlines={placeHeadlines}
           breakIndex={1}
           breakMarginIndex={1}
         />
+        <Separator className="mt-10 md:mt-20" />
       </section>
-      <section className="mx-auto max-w-[1440px] px-5 py-10 md:py-20">
-        <Separator className="mb-20 md:mb-40" />
-        <Image
-          priority
-          src="/images/service-place.png"
-          alt="place"
-          width={840}
-          height={560}
-          className="mx-auto w-full rounded-lg md:w-4/5 lg:w-3/5"
-        />
-      </section>
-      <ContactSection />
+      <div className="md:mx-auto md:flex md:max-w-[1440px] md:items-center md:gap-10 md:px-5 md:pb-20">
+        <section className="mx-auto max-w-[1440px] px-5 pb-10 md:m-0 md:flex-1 md:p-0">
+          <Image
+            priority
+            src="/images/service-place.png"
+            alt="place"
+            width={840}
+            height={560}
+            className="mx-auto w-full rounded-lg md:m-0"
+          />
+        </section>
+        <ContactSection />
+      </div>
     </main>
   );
 };

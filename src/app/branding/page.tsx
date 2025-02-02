@@ -22,17 +22,16 @@ const page = () => {
       <section className="mt-44 md:mt-64">
         <ParallaxText baseVelocity={-3}>Brand Marketing</ParallaxText>
       </section>
-      <section className="mx-auto mb-10 max-w-[1440px] px-5 pt-20 md:mb-20 md:pt-28">
-        <HeroSectionTypos
-          headlines={brandingHeadlines}
-          breakIndex={0}
-          breakMarginIndex={0}
-        />
-      </section>
-      <section className="mx-auto max-w-[1440px] px-5 py-10 md:py-20">
-        <Separator />
-      </section>
-      <ContactSection buttonText="견적 상담" showNotice={false} />
+      <div className="md:mx-auto md:flex md:max-w-[1440px] md:items-center md:gap-10 md:px-5">
+        <section className="mx-auto mb-10 max-w-[1440px] px-5 pt-20 md:mx-0 md:mb-20 md:px-0 md:pt-28">
+          <HeroSectionTypos
+            headlines={brandingHeadlines}
+            breakIndex={0}
+            breakMarginIndex={0}
+          />
+        </section>
+        <ContactSection buttonText="견적 상담" showNotice={false} />
+      </div>
     </main>
   );
 };
