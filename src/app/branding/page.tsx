@@ -22,13 +22,14 @@ const page = () => {
       <section className="mt-44 md:mt-64">
         <ParallaxText baseVelocity={-3}>Brand Marketing</ParallaxText>
       </section>
-      <div className="md:mx-auto md:flex md:max-w-[1440px] md:items-center md:gap-10 md:px-5">
-        <section className="mx-auto mb-10 max-w-[1440px] px-5 pt-20 md:mx-0 md:mb-20 md:px-0 md:pt-28">
+      <div className="lg:mx-auto lg:flex lg:max-w-[1440px] lg:items-center lg:gap-10 lg:px-5">
+        <section className="mx-auto max-w-[1440px] px-5 pt-20 md:mb-10 lg:mx-0 lg:mb-20 lg:px-0 lg:pt-28">
           <HeroSectionTypos
             headlines={brandingHeadlines}
             breakIndex={0}
             breakMarginIndex={0}
           />
+          <Separator className="mt-10 md:mt-20 lg:hidden" />
         </section>
         <ContactSection buttonText="견적 상담" showNotice={false} />
       </div>

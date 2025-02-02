@@ -28,8 +28,8 @@ const page = () => {
         />
         <Separator className="mt-10 md:mt-20" />
       </section>
-      <div className="md:mx-auto md:flex md:max-w-[1440px] md:items-center md:gap-10 md:px-5 md:pb-20">
-        <section className="mx-auto max-w-[1440px] px-5 pb-10 md:m-0 md:flex-1 md:p-0">
+      <div className="lg:mx-auto lg:flex lg:max-w-[1440px] lg:items-center lg:gap-10 lg:px-5 lg:pb-20">
+        <section className="mx-auto max-w-[1440px] px-5 pb-10 lg:m-0 lg:flex-1 lg:p-0">
           <Image
             priority
             src="/images/service-place.png"

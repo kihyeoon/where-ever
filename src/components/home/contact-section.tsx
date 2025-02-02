@@ -21,7 +21,7 @@ const ContactSection = ({
   const [isInView, setIsInView] = useState(false);
 
   return (
-    <section className="relative mx-auto w-full max-w-[1440px] px-5 py-10 md:m-0 md:mt-10 md:w-auto md:flex-1 md:p-0">
+    <section className="relative mx-auto w-full max-w-[1440px] px-5 py-10 lg:m-0 lg:w-auto lg:flex-1 lg:p-0 lg:pt-10">
       <motion.div
         className="mx-auto aspect-video max-w-xl rounded-2xl bg-border p-[1.5px]"
         initial={{ opacity: 0, y: 20 }}
