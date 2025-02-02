@@ -76,7 +76,6 @@ const Page = () => {
           />
         </div>
       </section>
-      <ContactSection />
     </main>
   );
 };
