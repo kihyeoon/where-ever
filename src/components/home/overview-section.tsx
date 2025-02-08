@@ -59,7 +59,7 @@ const OverviewSection = ({ noArticle }: Props) => {
 
       <div className="md:full relative aspect-square w-2/3 flex-1 overflow-hidden rounded-2xl bg-black md:mt-0">
         <Image
-          className="h-full w-full object-cover opacity-70"
+          className="h-full w-full object-cover opacity-90"
           src="/images/웨어에버-벽간판.jpeg"
           width={800}
           height={800}
