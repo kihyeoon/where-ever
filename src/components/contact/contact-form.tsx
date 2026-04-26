@@ -7,6 +7,7 @@ import {
   sendEmail,
 } from "@/service/contact";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import {
@@ -48,16 +49,21 @@ export default function ContactForm() {
   });
 
   function onSubmit(data: FormData) {
-    sendEmail(data)
+    return sendEmail(data)
       .then(() => {
         toast({
-          title: "메일을 성공적으로 보냈습니다.",
+          title: "메시지를 보냈습니다",
+          description: "확인 후 빠르게 회신드리겠습니다.",
         });
         form.reset();
       })
-      .catch(() => {
+      .catch((err: Error) => {
+        console.error(err);
         toast({
-          title: "메일을 보내는데 실패했습니다.",
+          variant: "destructive",
+          title: "메일 전송에 실패했습니다",
+          description:
+            "잠시 후 다시 시도하거나 wherever23@naver.com으로 직접 연락 주세요.",
         });
       });
   }
@@ -152,9 +158,17 @@ export default function ContactForm() {
         <Button
           type="submit"
           variant="outline"
+          disabled={form.formState.isSubmitting}
           className="rounded-none border-foreground/40 bg-transparent px-10 py-6 text-sm font-normal tracking-wider hover:bg-foreground hover:text-background"
         >
-          메시지 보내기
+          {form.formState.isSubmitting ? (
+            <>
+              <Loader2 className="animate-spin" />
+              보내는 중...
+            </>
+          ) : (
+            "메시지 보내기"
+          )}
         </Button>
       </form>
     </Form>
