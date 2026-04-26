@@ -19,6 +19,7 @@ export const itemVariants: Variants = {
     y: 0,
     filter: "blur(0px)",
     transition: { duration: 0.9, ease },
+    transitionEnd: { transform: "none", filter: "none" },
   },
 };
 
@@ -29,6 +30,7 @@ export const photoVariants: Variants = {
     scale: 1,
     filter: "blur(0px)",
     transition: { duration: 1.2, ease },
+    transitionEnd: { transform: "none", filter: "none" },
   },
 };
 
