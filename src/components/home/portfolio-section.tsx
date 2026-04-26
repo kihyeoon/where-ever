@@ -1,22 +1,54 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "motion/react";
+import {
+  containerVariants,
+  gridContainerVariants,
+  itemVariants,
+  photoVariants,
+  viewportOnce,
+} from "@/lib/motion";
 import { portfolioItems } from "./portfolio-data";
 
 export default function PortfolioSection() {
   return (
-    <section id="portfolio" className="px-4 pb-24 pt-32 md:px-14 md:pb-32 md:pt-40 lg:px-28 xl:px-44 2xl:px-56">
-      <header className="mb-12 md:mb-16">
-        <h2 className="font-[family-name:var(--font-alata)] text-4xl font-light tracking-tight md:text-6xl">
+    <section
+      id="portfolio"
+      className="px-4 pb-24 pt-32 md:px-14 md:pb-32 md:pt-40 lg:px-28 xl:px-44 2xl:px-56"
+    >
+      <motion.header
+        initial="hidden"
+        whileInView="show"
+        viewport={viewportOnce}
+        variants={containerVariants}
+        className="mb-12 md:mb-16"
+      >
+        <motion.h2
+          variants={itemVariants}
+          className="font-[family-name:var(--font-alata)] text-4xl font-light tracking-tight md:text-6xl"
+        >
           Portfolio
-        </h2>
-        <p className="mt-4 text-sm text-foreground/60 md:text-base">
+        </motion.h2>
+        <motion.p
+          variants={itemVariants}
+          className="mt-4 text-sm text-foreground/60 md:text-base"
+        >
           공간을 통해 브랜드의 가치를 전달한 사례
-        </p>
-      </header>
+        </motion.p>
+      </motion.header>
 
-      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+      <motion.ul
+        initial="hidden"
+        whileInView="show"
+        viewport={viewportOnce}
+        variants={gridContainerVariants}
+        className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6"
+      >
         {portfolioItems.map((item) => (
-          <li
+          <motion.li
             key={item.id}
+            variants={photoVariants}
             className="group relative aspect-[4/3] overflow-hidden bg-foreground/5"
           >
             <Image
@@ -39,9 +71,9 @@ export default function PortfolioSection() {
                 {item.title}
               </p>
             </div>
-          </li>
+          </motion.li>
         ))}
-      </ul>
+      </motion.ul>
     </section>
   );
 }

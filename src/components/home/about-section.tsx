@@ -1,43 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { motion, type Variants } from "motion/react";
+import { motion } from "motion/react";
+import {
+  containerVariants,
+  itemVariants,
+  lineVariants,
+  photoVariants,
+} from "@/lib/motion";
 import { cn } from "@/lib/utils";
-
-const ease = [0.16, 1, 0.3, 1] as const;
-
-const containerVariants: Variants = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.09, delayChildren: 0.05 } },
-};
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 28, filter: "blur(6px)" },
-  show: {
-    opacity: 1,
-    y: 0,
-    filter: "blur(0px)",
-    transition: { duration: 0.9, ease },
-  },
-};
-
-const photoVariants: Variants = {
-  hidden: { opacity: 0, scale: 1.06, filter: "blur(8px)" },
-  show: {
-    opacity: 1,
-    scale: 1,
-    filter: "blur(0px)",
-    transition: { duration: 1.2, ease },
-  },
-};
-
-const lineVariants: Variants = {
-  hidden: { scaleX: 0 },
-  show: {
-    scaleX: 1,
-    transition: { duration: 1, ease, delay: 0.15 },
-  },
-};
 
 type Beat = {
   num: string;
