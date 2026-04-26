@@ -1,9 +1,8 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import Link, { LinkProps } from "next/link";
-import { useRouter } from "next/navigation";
-import { Fragment, useState } from "react";
+import Link from "next/link";
+import { useState } from "react";
 import { navConfig } from "@/components/common/header/config";
 import LogoSmall from "@/components/common/logo-small";
 import { Button } from "@/components/ui/button";
@@ -13,6 +12,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 export function MobileNav({ isScrolled }: { isScrolled: boolean }) {
   const textColor = isScrolled ? "" : "text-white hover:text-white";
   const [open, setOpen] = useState(false);
+
+  const close = () => setOpen(false);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -57,80 +58,25 @@ export function MobileNav({ isScrolled }: { isScrolled: boolean }) {
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="pr-0">
-        <MobileLink
-          href="/"
-          className="flex w-fit items-center"
-          onOpenChange={setOpen}
-        >
+        <Link href="/" onClick={close} className="flex w-fit items-center">
           <LogoSmall type="grey" />
-        </MobileLink>
+        </Link>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
-          <div className="flex flex-col space-y-2">
-            {navConfig.map((item, index) => (
-              <div key={index} className="flex flex-col space-y-3 pt-6">
-                {item.href ? (
-                  <MobileLink href={item.href} onOpenChange={setOpen}>
-                    <h4 className="font-medium">{item.title}</h4>
-                  </MobileLink>
-                ) : (
-                  <h4 className="font-medium">{item.title}</h4>
-                )}
-                {item?.items?.length > 0 &&
-                  item.items.map((item) => (
-                    <Fragment key={item.href}>
-                      {!item.disabled &&
-                        (item.href ? (
-                          <MobileLink
-                            href={item.href}
-                            onOpenChange={setOpen}
-                            className="text-muted-foreground"
-                          >
-                            {item.title}
-                            {item.label && (
-                              <span className="ml-2 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs leading-none text-[#000000] no-underline group-hover:no-underline">
-                                {item.label}
-                              </span>
-                            )}
-                          </MobileLink>
-                        ) : (
-                          item.title
-                        ))}
-                    </Fragment>
-                  ))}
-              </div>
+          <ul className="flex flex-col gap-6 pt-6">
+            {navConfig.map((item) => (
+              <li key={item.title}>
+                <a
+                  href={item.href}
+                  onClick={close}
+                  className="block text-lg font-medium"
+                >
+                  {item.title}
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
         </ScrollArea>
       </SheetContent>
     </Sheet>
-  );
-}
-
-interface MobileLinkProps extends LinkProps {
-  onOpenChange?: (open: boolean) => void;
-  children: React.ReactNode;
-  className?: string;
-}
-
-function MobileLink({
-  href,
-  onOpenChange,
-  className,
-  children,
-  ...props
-}: MobileLinkProps) {
-  const router = useRouter();
-  return (
-    <Link
-      href={href}
-      onClick={() => {
-        router.push(href.toString());
-        onOpenChange?.(false);
-      }}
-      className={cn(className)}
-      {...props}
-    >
-      {children}
-    </Link>
   );
 }

@@ -12,13 +12,10 @@ const transporter = nodemailer.createTransport({
 });
 
 export async function sendEmail({
-  howDidYouHear,
-  monthlyBudget,
-  problemDescription,
   companyName,
-  region,
-  contactNumber,
   email,
+  contactNumber,
+  message,
 }: FormData) {
   const mailData = {
     to: process.env.AUTH_USER,
@@ -27,13 +24,10 @@ export async function sendEmail({
     html: `
       <h2>from: ${companyName}</h2>
       <br />
-      <p>${problemDescription}</p>
+      <p>${message.replace(/\n/g, "<br />")}</p>
       <br />
       <p>이메일: ${email}</p>
       <p>연락처: ${contactNumber}</p>
-      <p>지역: ${region}</p>
-      <p>월 예산: ${monthlyBudget}</p>
-      <p>알게된 경로: ${howDidYouHear}</p>
     `,
   };
   return transporter.sendMail(mailData);

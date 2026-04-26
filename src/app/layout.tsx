@@ -28,7 +28,8 @@ const jsonLd: WithContext<Organization> = {
   alternateName: "주식회사 웨어에버",
   url: process.env.SITE_URL,
   logo: `${process.env.SITE_URL}/apple-icon.png`,
-  description: "어디서나, 어디든지, 웨어에버",
+  description:
+    "공간을 통해 브랜드의 가치를 전달하는 인테리어 스튜디오, 웨어에버",
   address: {
     "@type": "PostalAddress",
     streetAddress: "중앙로48길 10",
@@ -44,21 +45,33 @@ const jsonLd: WithContext<Organization> = {
   },
   sameAs: ["https://instagram.com/wherever___official/"],
   areaServed: "KR",
-  knowsAbout: ["플레이스마케팅", "SNS마케팅", "바이럴마케팅", "브랜딩"],
+  knowsAbout: [
+    "인테리어",
+    "공간 디자인",
+    "상업공간 디자인",
+    "프랜차이즈 인테리어",
+    "오피스 인테리어",
+    "리테일 인테리어",
+    "브랜드 공간 기획",
+  ],
 };
 
 export const metadata: Metadata = {
   title: "Wherever",
-  description: "어디서나, 어디든지, 웨어에버",
+  description:
+    "공간을 통해 브랜드의 가치를 전달하는 인테리어 스튜디오, 웨어에버",
   keywords: [
     "Wherever",
     "주식회사 웨어에버",
     "웨어에버",
-    "마케팅",
-    "브랜딩",
-    "플레이스마케팅",
-    "SNS마케팅",
-    "바이럴마케팅",
+    "인테리어",
+    "공간 디자인",
+    "상업공간",
+    "상업공간 디자인",
+    "프랜차이즈 인테리어",
+    "오피스 인테리어",
+    "리테일 인테리어",
+    "브랜드 공간",
   ],
   icons: {
     icon: "/favicon.ico",
@@ -78,7 +91,8 @@ export const metadata: Metadata = {
   // openGraph
   openGraph: {
     title: "Wherever",
-    description: "어디서나, 어디든지, 웨어에버",
+    description:
+      "공간을 통해 브랜드의 가치를 전달하는 인테리어 스튜디오, 웨어에버",
     siteName: "Wherever",
     locale: "ko-KR",
     type: "website",

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import BackgroundInkDrops from "@/components/common/background-ink-drops";
 import ContactSection from "@/components/home/contact-section";
+import cupHolder from "../../../public/images/웨어에버-컵홀더.jpeg";
 
 const Page = () => {
   return (
@@ -8,7 +9,8 @@ const Page = () => {
       <section className="relative h-screen w-full overflow-hidden bg-black">
         <div className="relative h-screen w-full opacity-35">
           <Image
-            src="/images/웨어에버-컵홀더.jpeg"
+            src={cupHolder}
+            placeholder="blur"
             alt="overview"
             priority
             fill
