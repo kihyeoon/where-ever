@@ -2,7 +2,7 @@ import ContactForm from "@/components/contact/contact-form";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="px-4 py-24 md:px-14 md:py-32 lg:px-20 xl:px-32">
+    <section id="contact" className="px-4 py-24 md:px-14 md:py-32 lg:px-28 xl:px-44 2xl:px-56">
       <header className="mb-12 md:mb-16">
         <h2 className="font-[family-name:var(--font-alata)] text-4xl font-light tracking-tight md:text-6xl">
           Contact us

@@ -3,7 +3,7 @@ import { portfolioItems } from "./portfolio-data";
 
 export default function PortfolioSection() {
   return (
-    <section id="portfolio" className="px-4 pb-24 pt-32 md:px-14 md:pb-32 md:pt-40 lg:px-20 xl:px-32">
+    <section id="portfolio" className="px-4 pb-24 pt-32 md:px-14 md:pb-32 md:pt-40 lg:px-28 xl:px-44 2xl:px-56">
       <header className="mb-12 md:mb-16">
         <h2 className="font-[family-name:var(--font-alata)] text-4xl font-light tracking-tight md:text-6xl">
           Portfolio

@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 z-50 flex h-[60px] w-screen items-center justify-between px-4 transition-colors duration-300 md:px-14 lg:px-20 xl:px-32 ${
+      className={`fixed top-0 z-50 flex h-[60px] w-screen items-center justify-between px-4 transition-colors duration-300 md:px-14 lg:px-28 xl:px-44 2xl:px-56 ${
         isScrolled
           ? "border-b bg-background/50 backdrop-blur-md"
           : "bg-transparent"
