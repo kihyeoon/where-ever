@@ -17,16 +17,7 @@ export default function ContactSection() {
 
         <aside className="space-y-10 lg:border-l lg:border-foreground/15 lg:pl-12">
           <div>
-            <h3 className="font-[family-name:var(--font-alata)] text-xl tracking-wide">
-              Address
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed text-foreground/70">
-              서울특별시 양천구 중앙로48길 10
-            </p>
-          </div>
-
-          <div>
-            <h3 className="font-[family-name:var(--font-alata)] text-xl tracking-wide">
+            <h3 className="font-[family-name:var(--font-alata)] text-2xl tracking-wide">
               Email us
             </h3>
             <a
@@ -38,7 +29,7 @@ export default function ContactSection() {
           </div>
 
           <div>
-            <h3 className="font-[family-name:var(--font-alata)] text-xl tracking-wide">
+            <h3 className="font-[family-name:var(--font-alata)] text-2xl tracking-wide">
               Call us
             </h3>
             <a
