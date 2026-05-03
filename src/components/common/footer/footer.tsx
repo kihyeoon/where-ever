@@ -19,7 +19,6 @@ export default function Footer() {
               {/* <p>대표이사 : 정원령</p> */}
               <p>통신판매업 신고번호 : 2024-서울양천-1301</p>
               <p>주소 : 서울특별시 양천구 중앙로48길 10</p>
-              <p>전화번호 : 070-7801-3030</p>
               <p>
                 이메일 :
                 <a href="mailto:wherever23@naver.com">wherever23@naver.com</a>

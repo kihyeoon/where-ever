@@ -57,18 +57,6 @@ export default function ContactSection() {
             >
               wherever23@naver.com
             </a>
-          </div>
-
-          <div>
-            <h3 className="font-[family-name:var(--font-alata)] text-2xl tracking-wide">
-              Call us
-            </h3>
-            <a
-              href="tel:070-7801-3030"
-              className="mt-3 block text-sm text-foreground/70 transition-colors hover:text-foreground"
-            >
-              070-7801-3030
-            </a>
             <p className="mt-2 text-sm text-foreground/70">
               월–금 9:00 AM – 6:00 PM
             </p>
