@@ -59,15 +59,15 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: "model-house-seonghwangri",
     src: "/images/portfolio/model-house-seonghwangri.jpg",
-    title: "성황리 모델하우스",
+    title: "서한이다음 모델하우스",
     category: "주거 공간",
-    alt: "성황리 모델하우스 외관",
+    alt: "서한이다음 모델하우스 외관",
   },
   {
     id: "model-house-imdang",
     src: "/images/portfolio/model-house-imdang.jpg",
-    title: "임당역 스마트시티",
+    title: "스마트시티 모델하우스",
     category: "주거 공간",
-    alt: "임당역 스마트시티 모델하우스 외관",
+    alt: "스마트시티 모델하우스 외관",
   },
 ];
